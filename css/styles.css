@@ -16,18 +16,32 @@ footer {
 }
 
 .w {
+  background-image: url("../images/tom1.png");
+  background-size: 150px;
 }
 .a {
+  background-image: url("../images/tom2.png");
+  background-size: 150px;
 }
 .s {
+  background-image: url("../images/tom3.png");
+  background-size: 130px;
 }
 .d {
+  background-image: url("../images/tom4.png");
+  background-size: 130px;
 }
 .j {
+  background-image: url("../images/snare.png");
+  background-size: 130px;
 }
 .k {
+  background-image: url("../images/crash.png");
+  background-size: 130px;
 }
 .l {
+  background-image: url("../images/kick.png");
+  background-size: 130px;
 }
 
 .set {
