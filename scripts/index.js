@@ -4,11 +4,17 @@
 
 /*Button Press*/
 for(var i = 0; i < document.querySelectorAll(".drum").length; i++) {
-  document.querySelectorAll(".drum")[i].addEventListener("click", function() { makeSound(this.innerHTML) });
+  document.querySelectorAll(".drum")[i].addEventListener("click", function() {
+    makeSound(this.innerHTML);
+    buttonAnimation(this.innerHTML);
+  });
 }
 
 /*Keyboard Press*/
-document.addEventListener("keydown", function(event) { makeSound(event.key) });
+document.addEventListener("keydown", function(event) {
+  makeSound(event.key);
+  buttonAnimation(event.key);
+});
 
 /*Playing sounds*/
 function makeSound(char) {
@@ -42,4 +48,12 @@ function makeSound(char) {
       break;
     default: console.log(char);
   }
+}
+
+function buttonAnimation(key) {
+  var pressedKey = document.querySelector("." + key);
+  pressedKey.classList.add("pressed");
+  setTimeout(function() {
+    pressedKey.classList.remove("pressed");
+  }, 100);
 }
